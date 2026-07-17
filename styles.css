@@ -329,6 +329,8 @@ footer{padding:110px 0 56px;}
 .team-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);}
 .member{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:44px 36px;}
 .member .avatar{width:72px;height:72px;border-radius:50%;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;letter-spacing:-0.02em;margin-bottom:26px;}
+.member .avatar-photo{width:72px;height:72px;border-radius:50%;border:1px dashed var(--line);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-bottom:26px;overflow:hidden;}
+.member .avatar-photo img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
 .member h4{font-weight:620;font-size:21px;letter-spacing:-0.01em;font-variation-settings:'wdth' 110;margin-bottom:6px;}
 .member .role{color:var(--mute);font-size:15px;}
 .member .soon{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);display:block;margin-top:16px;}
