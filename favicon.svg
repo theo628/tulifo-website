@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.35; }
+      }
+      .pulse-dot {
+        animation: pulse 1.6s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+  <rect width="32" height="32" fill="#FFFFFF"/>
+  <text x="4" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#2333E8">t</text>
+  <circle class="pulse-dot" cx="22" cy="20" r="4" fill="#FF4230"/>
+</svg>

@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tulifo — The first round runs itself</title>
-<meta name="description" content="Tulifo interviews every candidate on video — structured, scored, and verified — before your team spends a single minute.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FFFFFF'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23FF4230'/%3E%3C/svg%3E">
+<title>Tulifo – Hire instantly</title>
+<meta name="description" content="Tulifo runs the entire interview in one conversation – beyond the JD and resume, every claim verified, scored in seconds – so you hire the best, not the rehearsed.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
 
 <nav aria-label="Main">
   <div class="wrap nav-inner">
-    <a class="wordmark" href="index.html" aria-label="Tulifo home">tulifo<span class="dot" aria-hidden="true"></span></a>
+    <a class="wordmark" href="index.html" aria-label="Tulifo home">tulifo<span class="dot pulse" aria-hidden="true"></span></a>
     <div class="nav-links">
       <a href="employers.html">For employers</a>
       <a href="candidates.html">For candidates</a>
@@ -27,6 +27,7 @@
     </div>
     <div class="nav-cta">
       <a class="signin" href="#signin">Sign in</a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
       <a class="btn btn-solid" href="demo.html">Book a demo</a>
     </div>
   </div>
@@ -36,13 +37,59 @@
 
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow mono">Autonomous interviews for recruiting</p>
-    <h1>The first round<br>runs itself<span class="rec pulse" aria-hidden="true"></span></h1>
+    <p class="eyebrow mono">The autonomous AI recruiter</p>
+    <h1>The <span class="blue">interview</span><br>runs itself<span class="rec pulse" aria-hidden="true"></span></h1>
     <div class="hero-sub">
-      <p>Tulifo interviews every candidate on video — structured, scored, and verified — before your team spends a single minute.</p>
       <div class="hero-actions">
-        <a class="btn btn-blue" href="demo.html">Book a demo</a>
-        <a class="btn btn-ghost" href="demo.html">Watch an interview</a>
+        <a class="btn btn-blue" href="demo.html">Request a demo</a>
+        <a class="btn btn-ghost" href="candidates.html">I'm a candidate</a>
+      </div>
+      <div class="claims-rail">
+        <span class="mono">One conversation</span>
+        <div class="rotator" aria-label="One conversation: interviewed beyond JD, interviewed beyond resume, psychometrics analysis, all claims verified, scored in seconds – the best hired, not the rehearsed.">
+          <ul id="claims">
+            <li>Interviewed beyond JD<em>We know what the role needs</em></li>
+            <li>Interviewed beyond resume<em>claims are openings, not facts</em></li>
+            <li>Psychometrics analysis<em>how they think, not just what</em></li>
+            <li>All claims verified<em>tested in the candidate's own answers</em></li>
+            <li>Scored in seconds<em>the report lands immediately</em></li>
+            <li>The best, hired.<em>not the rehearsed</em></li>
+            <li>Live video interviews<em>structured conversations with adaptive follow-ups</em></li>
+            <li>Real-time proctoring<em>integrity verified from start to finish</em></li>
+            <li>Skill tasks included<em>they show their work, not just talk about it</em></li>
+            <li>Full transcripts saved<em>every word is documented and searchable</em></li>
+            <li>Match scoring automated<em>compared to your JD instantly</em></li>
+            <li>No scheduling delays<em>candidates interview when they're ready</em></li>
+            <li>Identity verification built-in<em>know who's really on camera</em></li>
+            <li>Ranked reports ready<em>top candidates highlighted first</em></li>
+            <li>Language options available<em>interview in candidate's strongest language</em></li>
+            <li>Feedback scores clear<em>role-specific rubrics guide every answer</em></li>
+            <li>Bias detection active<em>consistent scoring across all candidates</em></li>
+            <li>Export data anytime<em>reports ready for your ATS</em></li>
+            <li>Team collaboration easy<em>share scores and notes instantly</em></li>
+            <li>Compliance documented<em>audit trails for every step</em></li>
+            <li>Second round faster<em>only interview the best fits</em></li>
+            <li>Candidate experience smooth<em>no waiting, no confusion</em></li>
+            <li>Mobile-friendly process<em>interview on phone or laptop</em></li>
+            <li>Screen recording included<em>watch their answers anytime</em></li>
+            <li>Summary reports auto-generated<em>key insights highlighted automatically</em></li>
+            <li>Diversity metrics tracked<em>see your pipeline composition clearly</em></li>
+            <li>Time zone friendly<em>candidates from anywhere can apply</em></li>
+            <li>Bulk interview capability<em>scale without hiring more recruiters</em></li>
+            <li>Custom scoring rubrics<em>match your company's values</em></li>
+            <li>Integration ready<em>works with your existing tools</em></li>
+            <li>API access available<em>build custom workflows</em></li>
+            <li>Data security certified<em>your candidate data is protected</em></li>
+            <li>No ATS required<em>complete pipeline in one place</em></li>
+            <li>Candidate notifications sent<em>they know their status immediately</em></li>
+            <li>Hiring velocity increased<em>fill roles in days, not months</em></li>
+            <li>Cost per hire reduced<em>less time spent per candidate</em></li>
+            <li>Retention improved<em>better match means longer tenure</em></li>
+            <li>Hiring bias eliminated<em>same scoring criteria for every candidate</em></li>
+            <li>Bottlenecks removed<em>interview while recruiter does other work</em></li>
+            <li>Scalable for growth<em>same process for 10 or 10,000 candidates</em></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -56,13 +103,13 @@
           <span class="rec-dot pulse" aria-hidden="true"></span>
           <span class="mono bright">Rec&nbsp;&nbsp;<span id="timecode">00:04:12</span></span>
         </div>
-        <span class="mono frame-role">Digital marketing lead — Coimbatore</span>
+        <span class="mono frame-role">Digital marketing lead – Coimbatore</span>
         <span class="mono bright">Q 07 / 12</span>
       </div>
       <div class="candidate" aria-hidden="true"></div>
       <div class="frame-q">
         <span class="mono">Tulifo is asking</span>
-        <h2>“Walk me through a campaign you ran end-to-end — what worked, and what you’d redo.”</h2>
+        <h2>"Walk me through a campaign you ran end-to-end – what worked, and what you'd redo."</h2>
       </div>
       <div class="frame-bottom">
         <div class="wave" id="wave" aria-hidden="true">
@@ -75,19 +122,17 @@
   </div>
 </section>
 
-<div class="ticker" aria-label="Every candidate, every role, every language, day and night">
+<div class="ticker" aria-label="24/7, No ghosting, Great hire, Live interview, Beyond resume, No scheduling, Quality up, Verified identity, Fair hiring, No guessing, Confidently hire, Instant report, Bias free, No delays, Retention up, Skills testing, Human first, No script, Diversity up, Fraud detection, Zero followups, Evidence based, Full screening, No filtering, Time saved, Careers pages, Every industry, Every applicant, Proctoring, Instant apply">
   <div class="ticker-track" aria-hidden="true">
-    <span class="mono ticker-set">Every candidate<span class="sep">●</span>Every role<span class="sep">●</span>Every language<span class="sep">●</span>Day and night<span class="sep">●</span></span>
-    <span class="mono ticker-set">Every candidate<span class="sep">●</span>Every role<span class="sep">●</span>Every language<span class="sep">●</span>Day and night<span class="sep">●</span></span>
-    <span class="mono ticker-set">Every candidate<span class="sep">●</span>Every role<span class="sep">●</span>Every language<span class="sep">●</span>Day and night<span class="sep">●</span></span>
-    <span class="mono ticker-set">Every candidate<span class="sep">●</span>Every role<span class="sep">●</span>Every language<span class="sep">●</span>Day and night<span class="sep">●</span></span>
+    <span class="mono ticker-set">24/7<span class="sep"></span>NO GHOSTING<span class="sep"></span>GREAT HIRE<span class="sep"></span>LIVE INTERVIEW<span class="sep"></span>BEYOND RESUME<span class="sep"></span>NO SCHEDULING<span class="sep"></span>QUALITY UP<span class="sep"></span>VERIFIED IDENTITY<span class="sep"></span>FAIR HIRING<span class="sep"></span>NO GUESSING<span class="sep"></span>CONFIDENTLY HIRE<span class="sep"></span>INSTANT REPORT<span class="sep"></span>BIAS FREE<span class="sep"></span>NO DELAYS<span class="sep"></span>BEYOND JD<span class="sep"></span>RETENTION UP<span class="sep"></span>SKILLS TESTING<span class="sep"></span>HUMAN FIRST<span class="sep"></span>NO SCRIPT<span class="sep"></span>DIVERSITY UP<span class="sep"></span>FRAUD DETECTION<span class="sep"></span>ZERO FOLLOWUPS<span class="sep"></span>EVIDENCE BASED<span class="sep"></span>FULL SCREENING<span class="sep"></span>NO FILTERING<span class="sep"></span>TIME SAVED<span class="sep"></span>CAREERS PAGES<span class="sep"></span>EVERY INDUSTRY<span class="sep"></span>EVERY APPLICANT<span class="sep"></span>PROCTORING<span class="sep"></span>INSTANT APPLY<span class="sep"></span>ONE TIMELINE<span class="sep"></span>NO HANDOFFS<span class="sep"></span></span>
+    <span class="mono ticker-set">24/7<span class="sep"></span>NO GHOSTING<span class="sep"></span>GREAT HIRE<span class="sep"></span>LIVE INTERVIEW<span class="sep"></span>BEYOND RESUME<span class="sep"></span>NO SCHEDULING<span class="sep"></span>QUALITY UP<span class="sep"></span>VERIFIED IDENTITY<span class="sep"></span>FAIR HIRING<span class="sep"></span>NO GUESSING<span class="sep"></span>CONFIDENTLY HIRE<span class="sep"></span>INSTANT REPORT<span class="sep"></span>BIAS FREE<span class="sep"></span>NO DELAYS<span class="sep"></span>BEYOND JD<span class="sep"></span>RETENTION UP<span class="sep"></span>SKILLS TESTING<span class="sep"></span>HUMAN FIRST<span class="sep"></span>NO SCRIPT<span class="sep"></span>DIVERSITY UP<span class="sep"></span>FRAUD DETECTION<span class="sep"></span>ZERO FOLLOWUPS<span class="sep"></span>EVIDENCE BASED<span class="sep"></span>FULL SCREENING<span class="sep"></span>NO FILTERING<span class="sep"></span>TIME SAVED<span class="sep"></span>CAREERS PAGES<span class="sep"></span>EVERY INDUSTRY<span class="sep"></span>EVERY APPLICANT<span class="sep"></span>PROCTORING<span class="sep"></span>INSTANT APPLY<span class="sep"></span>ONE TIMELINE<span class="sep"></span>NO HANDOFFS<span class="sep"></span></span>
   </div>
 </div>
 
-<section class="stats" aria-label="Key numbers">
-  <div class="stat reveal"><b>100%</b><span>of applicants get a real interview, not a resume filter</span></div>
-  <div class="stat reveal"><b>00:16</b><span>from invite to scored report on your desk</span></div>
-  <div class="stat reveal"><b>0</b><span>scheduling emails, follow-ups, or no-show reshuffles</span></div>
+<section class="stats" aria-label="Create and hire timeline">
+  <div class="stat reveal"><b>ONE</b><span>Word brief is all it takes</span></div>
+  <div class="stat reveal"><b>00:01</b><span>Second to publish your position</span></div>
+  <div class="stat reveal"><b>01:00</b><span>Hour to interview thousands and hire the best fit</span></div>
 </section>
 
 <section class="how" id="how">
@@ -98,19 +143,19 @@
     </div>
     <div class="steps">
       <div class="step reveal">
-        <span class="tc">00:00</span>
+        <span class="tc">00:01</span>
         <h4>Candidate applies</h4>
-        <p>On your careers page or from an invite — no calendar hold. The resume is parsed and matched to the JD the moment it lands.</p>
+        <p>On your careers page or from an invite – no calendar hold. The resume is parsed and matched to the role the moment it lands.</p>
       </div>
       <div class="step reveal">
-        <span class="tc">00:02</span>
+        <span class="tc">00:01</span>
         <h4>Tulifo interviews</h4>
         <p>A structured video conversation with adaptive follow-ups, skills checks, and built-in integrity proctoring.</p>
       </div>
       <div class="step reveal">
-        <span class="tc">00:16</span>
+        <span class="tc">00:01</span>
         <h4>Report lands</h4>
-        <p>Scored fit, skill evidence, verified identity, and full transcript — ranked and ready for round two.</p>
+        <p>Scored fit, skill evidence, verified identity, and full transcript – ranked and ready to hire.</p>
       </div>
     </div>
   </div>
@@ -120,7 +165,7 @@
   <div class="wrap report-grid">
     <div class="report-copy reveal">
       <h3>Decisions,<br>not gut feel</h3>
-      <p>Every interview becomes evidence: consistent scoring across candidates, skills demonstrated on camera, and identity verified against records — so round two starts with your best five, not your first fifty.</p>
+      <p>Every interview becomes evidence: consistent scoring across candidates, skills demonstrated on camera, and identity verified against records – so you hire your best five, not your first fifty.</p>
       <a class="btn btn-ghost" href="product.html#reports">See a sample report</a>
     </div>
     <div class="card reveal">
@@ -153,14 +198,14 @@
   <div class="wrap split-grid">
     <a class="split-cell reveal" href="employers.html">
       <span class="mono">For employers</span>
-      <h3>The first round, off your desk</h3>
-      <p>An AI video interview platform with fraud detection built in — every applicant screened, interviewed, and scored before your team looks up.</p>
+      <h3>The whole interview, off your desk</h3>
+      <p>An AI video interview platform with fraud detection built in – every applicant screened, interviewed, and scored before your team looks up.</p>
       <span class="split-link">See the platform →</span>
     </a>
     <a class="split-cell reveal" href="candidates.html">
       <span class="mono">For candidates</span>
       <h3>Interview now, not next week</h3>
-      <p>Upload your resume, pick an open role, and take your interview the moment you're ready — any language, any device, day or night.</p>
+      <p>Upload your resume, pick an open role, and take your interview the moment you're ready – any language, any device, day or night.</p>
       <span class="split-link">Browse open positions →</span>
     </a>
   </div>
@@ -169,7 +214,7 @@
 <section class="statement">
   <div class="wrap reveal">
     <span class="mono">Why we exist</span>
-    <h3>Hiring shouldn’t start with a resume.<br>It should start with <em>a conversation.</em></h3>
+    <h3>Hiring shouldn't start with a resume.<br>It should start with <em>a conversation.</em></h3>
   </div>
 </section>
 
@@ -178,7 +223,7 @@
 <footer>
   <div class="wrap">
     <div class="foot-top">
-      <h4 class="reveal">Run your first round tomorrow morning.</h4>
+      <h4 class="reveal">Hire instantly.</h4>
       <div class="foot-cols">
         <div class="col">
           <span class="h">Product</span>
@@ -205,10 +250,9 @@
         </div>
       </div>
     </div>
-    <div class="giant" aria-hidden="true">tulifo<span class="dot"></span></div>
+    <div class="giant" aria-hidden="true">tulifo<span class="dot pulse"></span></div>
     <div class="foot-bottom">
-      <span>© 2026 Tulifo · Coimbatore, India</span>
-      <span>Always interviewing<span class="signal-dot"> ●</span></span>
+      <span>© 2026 Tulifo · India</span>
     </div>
   </div>
 </footer>
@@ -216,3 +260,13 @@
 <script src="main.js" defer></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
