@@ -418,6 +418,41 @@ nav.open .nav-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)
   .backer{padding:22px 28px;width:100%;text-align:center;}
 }
 
+/* Legal pages */
+.legal{padding:72px 0 120px;}
+.legal .wrap{max-width:920px;}
+.legal-meta{color:var(--mute);display:block;margin-bottom:56px;}
+.legal-block{border-top:1px solid var(--line);padding:44px 0 20px;}
+.legal-block h3{font-weight:640;font-size:24px;letter-spacing:-0.02em;font-variation-settings:'wdth' 112;margin-bottom:16px;}
+.legal-block p{font-size:16.5px;line-height:1.6;color:var(--mute);margin-bottom:16px;max-width:760px;}
+.legal-block p a{color:var(--blue);}
+.legal-block ul{list-style:none;margin:4px 0 20px;max-width:760px;}
+.legal-block li{font-size:16px;line-height:1.5;padding:11px 0;border-top:1px solid var(--line);display:flex;gap:14px;}
+.legal-block li::before{content:'—';color:var(--blue);flex-shrink:0;}
+
+/* FAQ */
+.faq-sec{padding:72px 0 120px;}
+.faq-sec .wrap{max-width:920px;}
+.faq-group{margin-bottom:72px;}
+.faq-group > .mono{color:var(--blue);display:block;margin-bottom:24px;}
+.faq-list{border-top:1px solid var(--line);}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-item summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 0;font-weight:620;font-size:19px;letter-spacing:-0.01em;font-variation-settings:'wdth' 108;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:'+';font-weight:400;color:var(--blue);font-size:26px;line-height:1;flex-shrink:0;transition:transform .2s ease;}
+.faq-item[open] summary::after{transform:rotate(45deg);}
+.faq-item p{color:var(--mute);font-size:16.5px;line-height:1.6;padding:0 0 26px;max-width:760px;}
+.faq-item p a{color:var(--blue);}
+
+/* Footer legal row */
+.foot-legal{display:flex;gap:22px;flex-wrap:wrap;}
+.foot-legal a:hover{color:var(--blue);}
+
+@media (max-width:640px){
+  .legal,.faq-sec{padding:48px 0 80px;}
+  .faq-item summary{font-size:17px;padding:20px 0;}
+}
+
 /* REDUCED MOTION */
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}
