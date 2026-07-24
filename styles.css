@@ -60,11 +60,11 @@ h1{
   max-width:1200px;
 }
 h1 .rec{display:inline-block;width:.22em;height:.22em;border-radius:50%;background:var(--signal);margin-left:.07em;}
-.hero-sub{display:flex;justify-content:center;align-items:center;margin-top:56px;gap:0;position:relative;}
+.hero-sub{display:flex;justify-content:center;align-items:flex-start;margin-top:56px;gap:0;position:relative;}
 .hero-sub::after{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--ink);}
 .hero-sub p{font-size:21px;line-height:1.5;max-width:520px;color:var(--ink);}
-.hero-actions{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:14px;flex-shrink:0;width:50%;padding-right:40px;}
-.claims-rail{border-left:none;padding-left:40px;min-width:420px;flex-shrink:0;padding-top:4px;padding-bottom:4px;width:50%;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;}
+.hero-actions{display:flex;flex-direction:row;align-items:flex-start;justify-content:center;gap:14px;flex-shrink:0;width:50%;padding-right:40px;padding-top:4px;}
+.claims-rail{border-left:none;padding-left:40px;min-width:420px;flex-shrink:0;padding-top:4px;padding-bottom:4px;width:50%;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;}
 .claims-rail > .mono{color:var(--blue);display:block;margin-bottom:22px;}
 .rotator{height:104px;overflow:hidden;}
 .rotator ul{list-style:none;margin:0;padding:0;}
