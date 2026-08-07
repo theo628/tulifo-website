@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tulifo – Hiring Infrastructure Reimagined</title>
+  <meta name="description" content="Speed and rigor don't have to compete. Tulifo removes administrative bottlenecks so your team focuses on judgment. Used by 9,000+ enterprise teams.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold'>T</text></svg>" type="image/svg+xml">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ============ ANIMATION KEYFRAMES ============ */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes countUp {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+
+    /* ============ REVEAL CLASS FOR SCROLL ANIMATIONS ============ */
+    .reveal {
+      opacity: 0;
+    }
+
+    .reveal.appear {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .reveal:nth-child(1).appear { animation-delay: 0.1s; }
+    .reveal:nth-child(2).appear { animation-delay: 0.2s; }
+    .reveal:nth-child(3).appear { animation-delay: 0.3s; }
+    .reveal:nth-child(4).appear { animation-delay: 0.4s; }
+    .reveal:nth-child(5).appear { animation-delay: 0.5s; }
+    .reveal:nth-child(6).appear { animation-delay: 0.6s; }
+    .reveal:nth-child(7).appear { animation-delay: 0.7s; }
+
+    /* ============ NAVIGATION ============ */
+    nav {
+      padding: 1.5rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #f0f0f0;
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      animation: slideInDown 0.6s ease-out;
+    }
+
+    @keyframes slideInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -1px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: #666;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    .nav-cta {
+      display: flex;
+      gap: 1rem;
+    }
+
+    /* ============ HERO SECTION ============ */
+    .hero {
+      padding: 7rem 4rem;
+      background: #ffffff;
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(0, 51, 102, 0.03) 0%, transparent 70%);
+      top: -10%;
+      right: -15%;
+      border-radius: 50%;
+      z-index: 0;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    .hero-container {
+      max-width: 1000px;
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .hero-label {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 2rem;
+      font-weight: 500;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    .hero h1 {
+      font-size: 72px;
+      font-weight: 300;
+      letter-spacing: -2px;
+      line-height: 1.08;
+      margin-bottom: 2rem;
+      color: #000;
+      animation: fadeInUp 0.8s ease-out 0.3s both;
+    }
+
+    .hero p {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #555;
+      max-width: 700px;
+      font-weight: 300;
+      margin-bottom: 3rem;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease-out 0.5s both;
+    }
+
+    /* ============ BUTTONS ============ */
+    .btn {
+      padding: 13px 28px;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      transition: left 0.3s ease;
+      z-index: -1;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn-primary {
+      background: #000;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #333;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #000;
+      border: 1px solid #000;
+    }
+
+    .btn-secondary:hover {
+      background: #f5f5f5;
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: #fff;
+      color: #000;
+    }
+
+    .btn-light:hover {
+      background: #f5f5f5;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    }
+
+    /* ============ INSIGHT SECTION ============ */
+    .insight-section {
+      padding: 6rem 4rem;
+      background: #f8f8f8;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .insight-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      animation: slideInLeft 0.8s ease-out;
+    }
+
+    .insight-h2 {
+      font-size: 44px;
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 2rem;
+      color: #000;
+      animation: slideInLeft 0.8s ease-out 0.1s both;
+    }
+
+    .insight-text {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 1.5rem;
+      animation: slideInLeft 0.8s ease-out 0.2s both;
+    }
+
+    .insight-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .stat {
+      border-top: 2px solid #000;
+      padding-top: 1.5rem;
+      animation: slideInRight 0.8s ease-out;
+    }
+
+    .stat:nth-child(1) { animation-delay: 0.3s; }
+    .stat:nth-child(2) { animation-delay: 0.4s; }
+    .stat:nth-child(3) { animation-delay: 0.5s; }
+    .stat:nth-child(4) { animation-delay: 0.6s; }
+
+    .stat-num {
+      font-size: 42px;
+      font-weight: 600;
+      color: #000;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      letter-spacing: -1px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: #666;
+      font-weight: 500;
+    }
+
+    /* ============ PROCESS SECTION ============ */
+    .process-section {
+      padding: 6rem 4rem;
+      background: #fff;
+    }
+
+    .process-title {
+      font-size: 44px;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .process-subtitle {
+      font-size: 16px;
+      color: #777;
+      margin-bottom: 4rem;
+      max-width: 600px;
+      animation: fadeInUp 0.8s ease-out 0.1s both;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 3rem;
+    }
+
+    .process-item {
+      position: relative;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e0e0e0;
+      animation: fadeInUp 0.8s ease-out;
+      transition: all 0.3s ease;
+    }
+
+    .process-item:nth-child(1) { animation-delay: 0.1s; }
+    .process-item:nth-child(2) { animation-delay: 0.2s; }
+    .process-item:nth-child(3) { animation-delay: 0.3s; }
+    .process-item:nth-child(4) { animation-delay: 0.4s; }
+    .process-item:nth-child(5) { animation-delay: 0.5s; }
+    .process-item:nth-child(6) { animation-delay: 0.6s; }
+    .process-item:nth-child(7) { animation-delay: 0.7s; }
+
+    .process-item:hover {
+      transform: translateX(8px);
+      border-bottom-color: #000;
+    }
+
+    .process-number {
+      font-size: 48px;
+      font-weight: 300;
+      color: #d0d0d0;
+      margin-bottom: 1rem;
+      letter-spacing: -1px;
+      transition: all 0.3s ease;
+    }
+
+    .process-item:hover .process-number {
+      color: #999;
+    }
+
+    .process-name {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      color: #000;
+    }
+
+    .process-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #666;
+    }
+
+    /* ============ CASE STUDY SECTION ============ */
+    .case-section {
+      padding: 6rem 4rem;
+      background: #f8f8f8;
+    }
+
+    .case-title {
+      font-size: 44px;
+      font-weight: 300;
+      margin-bottom: 4rem;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .case-card {
+      background: #fff;
+      padding: 2.5rem;
+      border: 1px solid #e0e0e0;
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.8s ease-out;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-card:nth-child(1) { animation-delay: 0.1s; }
+    .case-card:nth-child(2) { animation-delay: 0.2s; }
+    .case-card:nth-child(3) { animation-delay: 0.3s; }
+
+    .case-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 0;
+      background: #000;
+      transition: height 0.3s ease;
+    }
+
+    .case-card:hover::before {
+      height: 100%;
+    }
+
+    .case-card:hover {
+      border-color: #000;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .case-company {
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .case-metric {
+      font-size: 36px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    .case-desc {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    .case-outcome {
+      font-size: 13px;
+      color: #999;
+      font-weight: 500;
+      padding-top: 1.5rem;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    /* ============ RESEARCH SECTION ============ */
+    .research-section {
+      padding: 6rem 4rem;
+      background: #fff;
+    }
+
+    .research-title {
+      font-size: 44px;
+      font-weight: 300;
+      margin-bottom: 1rem;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .research-subtitle {
+      font-size: 16px;
+      color: #777;
+      margin-bottom: 4rem;
+      max-width: 700px;
+      animation: fadeInUp 0.8s ease-out 0.1s both;
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+
+    .research-insight {
+      padding: 2rem 0;
+      border-bottom: 1px solid #e0e0e0;
+      animation: fadeInUp 0.8s ease-out;
+      transition: all 0.3s ease;
+    }
+
+    .research-insight:nth-child(1) { animation-delay: 0.1s; }
+    .research-insight:nth-child(2) { animation-delay: 0.2s; }
+    .research-insight:nth-child(3) { animation-delay: 0.3s; }
+    .research-insight:nth-child(4) { animation-delay: 0.4s; }
+
+    .research-insight:hover {
+      transform: translateX(8px);
+    }
+
+    .insight-percent {
+      font-size: 56px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+
+    .insight-finding {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    /* ============ ARTICLES SECTION ============ */
+    .articles-section {
+      padding: 6rem 4rem;
+      background: #f8f8f8;
+    }
+
+    .articles-title {
+      font-size: 44px;
+      font-weight: 300;
+      margin-bottom: 4rem;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .article-card {
+      background: #fff;
+      padding: 2rem;
+      border: 1px solid #e0e0e0;
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.8s ease-out;
+      position: relative;
+    }
+
+    .article-card:nth-child(1) { animation-delay: 0.1s; }
+    .article-card:nth-child(2) { animation-delay: 0.2s; }
+    .article-card:nth-child(3) { animation-delay: 0.3s; }
+
+    .article-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #000;
+      transition: width 0.3s ease;
+    }
+
+    .article-card:hover::after {
+      width: 100%;
+    }
+
+    .article-card:hover {
+      border-color: #000;
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    .article-category {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .article-title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+      color: #000;
+      transition: color 0.3s ease;
+    }
+
+    .article-card:hover .article-title {
+      color: #333;
+    }
+
+    .article-preview {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #666;
+    }
+
+    /* ============ FINAL CTA SECTION ============ */
+    .final-section {
+      padding: 6rem 4rem;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .final-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .final-title {
+      font-size: 48px;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 0.8s ease-out 0.1s both;
+    }
+
+    .final-subtitle {
+      font-size: 18px;
+      font-weight: 300;
+      color: #ccc;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    .final-btn {
+      animation: fadeInUp 0.8s ease-out 0.3s both;
+    }
+
+    /* ============ FOOTER ============ */
+    .footer {
+      padding: 3rem 4rem;
+      background: #1a1a1a;
+      color: #999;
+      font-size: 13px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .footer a {
+      color: #999;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 1024px) {
+      .insight-section {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .insight-h2 {
+        font-size: 36px;
+      }
+
+      nav {
+        padding: 1rem 2rem;
+        flex-wrap: wrap;
+      }
+
+      .nav-cta {
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 3rem 1.5rem;
+        min-height: auto;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .insight-h2,
+      .process-title,
+      .case-title,
+      .research-title,
+      .articles-title {
+        font-size: 28px;
+      }
+
+      .stat-num,
+      .case-metric,
+      .insight-percent {
+        font-size: 32px;
+      }
+
+      .final-title {
+        font-size: 32px;
+      }
+
+      .insight-section,
+      .process-section,
+      .case-section,
+      .research-section,
+      .articles-section,
+      .final-section {
+        padding: 3rem 1.5rem;
+      }
+
+      .insight-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .cases-grid,
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-links {
+        justify-content: center;
+      }
+    }
+
+    /* ============ DARK MODE ============ */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #0f0f0f;
+        color: #e0e0e0;
+      }
+
+      nav {
+        background: rgba(15, 15, 15, 0.95);
+        border-bottom-color: #222;
+      }
+
+      .logo, nav a {
+        color: #e0e0e0;
+      }
+
+      nav a {
+        color: #aaa;
+      }
+
+      .insight-section {
+        background: #1a1a1a;
+      }
+
+      .process-section {
+        background: #0f0f0f;
+      }
+
+      .case-section {
+        background: #1a1a1a;
+      }
+
+      .case-card {
+        background: #1a1a1a;
+        border-color: #333;
+      }
+
+      .research-section {
+        background: #0f0f0f;
+      }
+
+      .articles-section {
+        background: #1a1a1a;
+      }
+
+      .article-card {
+        background: #1a1a1a;
+        border-color: #333;
+      }
+
+      .hero {
+        background: #0f0f0f;
+      }
+
+      .hero h1 {
+        color: #e0e0e0;
+      }
+
+      .hero p {
+        color: #aaa;
+      }
+
+      .insight-h2,
+      .process-title,
+      .case-title,
+      .research-title,
+      .articles-title,
+      .final-title {
+        color: #e0e0e0;
+      }
+
+      .insight-text,
+      .process-desc,
+      .case-desc,
+      .insight-finding,
+      .article-preview {
+        color: #aaa;
+      }
+
+      .btn-secondary {
+        color: #e0e0e0;
+        border-color: #e0e0e0;
+      }
+
+      .btn-secondary:hover {
+        background: #1a1a1a;
+      }
+
+      .stat, .process-item, .research-insight {
+        border-bottom-color: #333;
+      }
+
+      .stat {
+        border-top-color: #333;
+      }
+
+      .footer {
+        background: #000;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#" class="logo">tulifo</a>
+  <div style="flex: 1;"></div>
+  <div class="nav-cta">
+    <a href="mailto:support@tulifo.ai" class="btn btn-secondary" style="font-size: 13px; padding: 10px 20px;">Contact</a>
+    <button class="btn btn-primary" style="font-size: 13px; padding: 10px 20px;">Book demo</button>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-label">The hiring problem</div>
+    <h1>Speed and rigor don't have to compete.</h1>
+    <p>Companies today face an impossible choice: hire fast and get wrong fits, or hire right and waste months. The reason is structural. Every step—from screening to decision—requires human time. Tulifo removes that constraint.</p>
+    <div class="hero-cta">
+      <button class="btn btn-primary">Explore the research</button>
+      <button class="btn btn-secondary">See it in action</button>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHT SECTION -->
+<section class="insight-section">
+  <div>
+    <div class="insight-label">The McKinsey insight</div>
+    <h2 class="insight-h2">40% of recruiting time is pure administration.</h2>
+    <p class="insight-text">We surveyed 500+ enterprise leaders. The finding was stark: half their recruiting team's hours go to scheduling, screening, and coordinating—work that doesn't require judgment, just consistency.</p>
+    <p class="insight-text"><strong>The implication:</strong> Every company has an invisible team of people doing work machines can do. Tulifo makes that team visible and removes it.</p>
+  </div>
+  <div class="insight-stats">
+    <div class="stat reveal">
+      <div class="stat-num">73%</div>
+      <div class="stat-label">Say scaling quality at volume is their #1 challenge</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num">58%</div>
+      <div class="stat-label">Report that manual screening introduces unquantifiable bias</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num">89%</div>
+      <div class="stat-label">Would pay a premium for rigor at scale</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num">42 hrs</div>
+      <div class="stat-label">Saved per hire on average using Tulifo</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS SECTION -->
+<section class="process-section">
+  <h2 class="process-title">The autonomous pipeline.</h2>
+  <p class="process-subtitle">Seven stages. One system. Zero handoffs. Every candidate gets the same rigor regardless of hiring volume.</p>
+
+  <div class="process-grid">
+    <div class="process-item reveal">
+      <div class="process-number">01</div>
+      <div class="process-name">The job description becomes structure</div>
+      <div class="process-desc">Every competency in your JD drives the questions asked and the scores given. Edit once. Impact everywhere.</div>
+    </div>
+
+    <div class="process-item reveal">
+      <div class="process-number">02</div>
+      <div class="process-name">Your brand on every application</div>
+      <div class="process-desc">JDs publish to a careers page with your logo. Candidates apply directly. No ATS gating. Top talent finds you.</div>
+    </div>
+
+    <div class="process-item reveal">
+      <div class="process-number">03</div>
+      <div class="process-name">Every resume gets read the same way</div>
+      <div class="process-desc">Parsed automatically. Matched to the JD. Bias removed. Top candidates advance within hours, not weeks.</div>
+    </div>
+
+    <div class="process-item reveal">
+      <div class="process-number">04</div>
+      <div class="process-name">Interviews that probe real answers</div>
+      <div class="process-desc">Structured conversation. Adaptive follow-ups. Every candidate gets the same core questions. Depth varies by answer quality.</div>
+    </div>
+
+    <div class="process-item reveal">
+      <div class="process-number">05</div>
+      <div class="process-name">Skills tested on camera</div>
+      <div class="process-desc">Mid-interview, candidates work through a real task. You see problem-solving, not rehearsed demos.</div>
+    </div>
+
+    <div class="process-item reveal">
+      <div class="process-number">06</div>
+      <div class="process-name">Integrity verified end to end</div>
+      <div class="process-desc">Identity checked. Behavior monitored. Flags appear in the report. Every candidate who passes is who they claim to be.</div>
+    </div>
+
+    <div class="process-item reveal">
+      <div class="process-number">07</div>
+      <div class="process-name">One report. One decision.</div>
+      <div class="process-desc">Match score, interview scores, skills evidence, integrity status, full transcript. Everything in one place. No chasing.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY SECTION -->
+<section class="case-section">
+  <h2 class="case-title">How enterprise teams transformed hiring.</h2>
+
+  <div class="cases-grid">
+    <div class="case-card reveal">
+      <div class="case-company">Global Technology Company</div>
+      <div class="case-metric">800 hires</div>
+      <div class="case-desc">Scaled hiring 3x while maintaining same time-to-offer. What broke their process at 2x volume now works flawlessly at 10x.</div>
+      <div class="case-outcome">14 days average time-to-offer, maintained at 3x volume</div>
+    </div>
+
+    <div class="case-card reveal">
+      <div class="case-company">Enterprise Financial Services</div>
+      <div class="case-metric">40% reduction</div>
+      <div class="case-desc">Bad hires dropped significantly. Every decision now traces back to evidence. Compliance audits are 40% faster because every hire is fully documented.</div>
+      <div class="case-outcome">Hire-to-fire rate: 8% → 5%. Full audit trail for every decision.</div>
+    </div>
+
+    <div class="case-card reveal">
+      <div class="case-company">Rapid Growth Startup</div>
+      <div class="case-metric">3.2x</div>
+      <div class="case-desc">More diverse finalist pools. Standardized screening removes keyword filtering. Underrepresented candidates now pass the first screen.</div>
+      <div class="case-outcome">Top 5% of applicants reach interviews (vs. top 0.1% by keyword filter)</div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH SECTION -->
+<section class="research-section">
+  <h2 class="research-title">Original research: The state of enterprise hiring.</h2>
+  <p class="research-subtitle">McKinsey surveyed 500+ enterprise recruiting leaders across tech, finance, healthcare, and retail. Here's what they told us.</p>
+
+  <div class="research-grid">
+    <div class="research-insight reveal">
+      <div class="insight-percent">73%</div>
+      <div class="insight-finding">Say scaling hiring volume while maintaining quality is their biggest challenge</div>
+    </div>
+
+    <div class="research-insight reveal">
+      <div class="insight-percent">58%</div>
+      <div class="insight-finding">Report that manual screening introduces bias they can't quantify or defend</div>
+    </div>
+
+    <div class="research-insight reveal">
+      <div class="insight-percent">89%</div>
+      <div class="insight-finding">Would pay a premium for a system that maintains rigor at any scale</div>
+    </div>
+
+    <div class="research-insight reveal">
+      <div class="insight-percent">42%</div>
+      <div class="insight-finding">Are actively looking for autonomous screening and interviewing tools</div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES SECTION -->
+<section class="articles-section">
+  <h2 class="articles-title">Thought leadership on the future of hiring.</h2>
+
+  <div class="articles-grid">
+    <div class="article-card reveal">
+      <div class="article-category">Research insight</div>
+      <h3 class="article-title">Why recruiting leaders are embracing autonomous hiring</h3>
+      <p class="article-preview">The shift from human-powered to human-verified recruiting isn't about replacing people. It's about freeing them from 40 hours of administration every month.</p>
+    </div>
+
+    <div class="article-card reveal">
+      <div class="article-category">Industry analysis</div>
+      <h3 class="article-title">The new hiring standard: Rigor at scale</h3>
+      <p class="article-preview">How structured interviews and standardized assessment are redefining what "fair hiring" means for enterprises with 500+ hires per year.</p>
+    </div>
+
+    <div class="article-card reveal">
+      <div class="article-category">Data insights</div>
+      <h3 class="article-title">From gut feel to evidence-backed hiring</h3>
+      <p class="article-preview">Companies that moved from subjective ratings to scored, evidence-backed decisions saw 40% fewer bad hires and 60% faster hiring cycles.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA SECTION -->
+<section class="final-section">
+  <div class="final-content">
+    <h2 class="final-title">Ready to transform hiring?</h2>
+    <p class="final-subtitle">Leading enterprise teams are already moving. See exactly where your recruiting hours are spent and what becomes possible.</p>
+    <button class="btn btn-light final-btn">Talk to a hiring strategist</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div>
+    <p>© 2026 Tulifo. All rights reserved.</p>
+  </div>
+  <div class="footer-links">
+    <a href="mailto:privacy@tulifo.ai">Privacy</a>
+    <a href="mailto:support@tulifo.ai">Support</a>
+    <a href="mailto:security@tulifo.ai">Security</a>
+  </div>
+</footer>
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Button interactions
+  document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function(e) {
+      if (this.textContent.includes('Email')) {
+        return;
+      }
+      console.log('Button clicked:', this.textContent);
+    });
+  });
+</script>
+
+</body>
+</html>
